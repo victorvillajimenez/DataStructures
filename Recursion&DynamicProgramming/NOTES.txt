@@ -1,0 +1,37 @@
+=================== Sliding Window ===================
+
+How to Solve Sliding Window Problems - An Intro To Dynamic Programming:
+
+https://medium.com/outco/how-to-solve-sliding-window-problems-28d67601a66
+
+How do you identify them?
+* The problem will involve a data structure that is ordered and iterable like an array or a string
+* You are looking for some subrange in that array/string, like a longest, shortest or target value
+* There is an apparent naive or brute force solution that runs in O(N²), O(2^N) or some other large time complexity
+
+Different Kinds of Windows:
+
+1) Fast/Slow
+These ones have a fast pointer that grows your window under a certain condition. It will also have a slow pointer, that shrinks the window. Once you find a valid window with the fast pointer, you want to start sliding the slow pointer up until you no longer have a valid window. Examples:
+  - Bit Flip
+  - Minimum Window Substring
+  - Consecutive Subarray Sum
+
+2) Fast/Catchup
+Similar to Fast/Slow, except, instead of incrementing the slow pointer up, you simply move it up the fast pointer’s location and then keep moving the fast pointer up. It sort of “jumps” to the index of the fast pointer when a certain condition is met. Examples:
+  - Maximum Consecutive Sum
+  - Buy / Sell Stocks
+
+3) Fast/Lagging
+Essentially the slow pointer is simply referencing one or two indices behind the fast pointer and it’s keeping track of some choice you’ve made. Examples:
+  - House Robber
+
+4) Front/Back
+You have one pointer from the front, and the other from the back. Examples:
+  - Raining Water
+  - Sorted Two Sum
+
+
+
+
+======================================================
